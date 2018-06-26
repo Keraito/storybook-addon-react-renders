@@ -6,17 +6,11 @@ const isEmptyObject = object => !Object.keys(object).length;
 export const WithOptions = ({ render, ...rest }) => (
   <WithLifecycleEvents
     render={({ events, options }) => {
-      const emptyFilteredEvents = options.showEmptyEvents
-        ? events
-        : events.filter(
-            event => Boolean(event.prev) && !isEmptyObject(event.prev)
-          );
-
       const typeFilteredEvents = options.excludeEventTypes.length
-        ? emptyFilteredEvents.filter(
+        ? events.filter(
             event => !options.excludeEventTypes.includes(event.name.split[1])
           )
-        : emptyFilteredEvents;
+        : events;
 
       const propFilteredEvents = options.filterEventKeys.length
         ? typeFilteredEvents.map(event => ({
@@ -29,7 +23,13 @@ export const WithOptions = ({ render, ...rest }) => (
           }))
         : typeFilteredEvents;
 
-      return render({ events: propFilteredEvents, options });
+      const emptyFilteredEvents = options.showEmptyEvents
+        ? propFilteredEvents
+        : propFilteredEvents.filter(
+            event => Boolean(event.prev) && !isEmptyObject(event.prev)
+          );
+
+      return render({ events: emptyFilteredEvents, options });
     }}
     {...rest}
   />
