@@ -28,9 +28,9 @@ class DemoComponent extends React.Component {
   }
 
   componentWillUnmount() {
-    if (this.props.delayed) {
-      clearTimeout(this.timer);
-    }
+    // if (this.props.delayed) {
+    //   clearTimeout(this.timer);
+    // }
   }
 
   render() {
@@ -77,7 +77,7 @@ storiesOf("Lifecycle addon|Options", module)
     () => <DemoComponent component={Button} />,
     {
       lifecycle: {
-        showEmptyEvents: true
+        showEmptyEvents: false
       }
     }
   )
