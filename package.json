@@ -1,0 +1,33 @@
+{
+  "name": "storybook-react-lifecycle",
+  "version": "1.0.0",
+  "description": "Storybook addon for checking lifecycle analysis of React components.",
+  "main": "dist/index.js",
+  "author": "Chak Shun Yu",
+  "license": "MIT",
+  "files": [
+    "dist",
+    "styles.js",
+    "register.js"
+  ],
+  "devDependencies": {
+    "@storybook/addon-actions": "^4.0.0-alpha.9",
+    "@storybook/addon-links": "^4.0.0-alpha.9",
+    "@storybook/addon-options": "^3.4.8",
+    "@storybook/addons": "^4.0.0-alpha.9",
+    "@storybook/react": "^4.0.0-alpha.9",
+    "babel-core": "^6.26.3",
+    "babel-runtime": "^6.26.0",
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "dependencies": {
+    "react-emotion": "^9.2.4",
+    "react-inspector": "^2.3.0",
+    "why-did-you-update": "^0.1.1"
+  },
+  "scripts": {
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
+  }
+}
