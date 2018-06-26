@@ -73,7 +73,7 @@ storiesOf("Lifecycle addon", module)
 
 storiesOf("Lifecycle addon|Options", module)
   .add(
-    "with empty events enabled",
+    "with empty events disabled",
     () => <DemoComponent component={Button} />,
     {
       lifecycle: {
