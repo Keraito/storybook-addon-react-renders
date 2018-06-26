@@ -8,22 +8,19 @@ export const WithOptions = ({ render, ...rest }) => (
     render={({ events, options }) => {
       const falsyFilteredEvents = events.filter(event => event.prev);
 
-      const typeFilteredEvents = options.excludeEventTypes.length
-        ? falsyFilteredEvents.filter(
-            event =>
-              !options.excludeEventTypes.includes(event.name.split(".")[1])
-          )
-        : falsyFilteredEvents;
-
-      const componentFilteredEvents = options.excludeComponents.length
-        ? typeFilteredEvents.filter(
-            event =>
-              !options.excludeComponents.includes(event.name.split(".")[0])
-          )
-        : typeFilteredEvents;
+      const componentAndTypeFilteredEvents =
+        options.excludeComponents.length || options.excludeEventTypes.length
+          ? falsyFilteredEvents.filter(event => {
+              const [component, type] = event.name.split(".");
+              return (
+                !options.excludeEventTypes.includes(type) &&
+                !options.excludeComponents.includes(component)
+              );
+            })
+          : falsyFilteredEvents;
 
       const propFilteredEvents = options.filterEventKeys.length
-        ? componentFilteredEvents.map(event => ({
+        ? componentAndTypeFilteredEvents.map(event => ({
             ...event,
             ...filterAllowedKeysFromPrevAndNext({
               allowedKeys: options.filterEventKeys,
@@ -31,7 +28,7 @@ export const WithOptions = ({ render, ...rest }) => (
               next: event.next
             })
           }))
-        : componentFilteredEvents;
+        : componentAndTypeFilteredEvents;
 
       const emptyFilteredEvents = options.showEmptyEvents
         ? propFilteredEvents
