@@ -98,4 +98,13 @@ storiesOf("Lifecycle addon|Options", module)
         filterEventKeys: ["booleanProp", "numberProp", "arrayProp"]
       }
     }
+  )
+  .add(
+    "with excluded events from specific components",
+    () => <DemoComponent component={Button} />,
+    {
+      lifecycle: {
+        excludeComponents: ["Button"]
+      }
+    }
   );

@@ -1,5 +1,6 @@
 export default {
   showEmptyEvents: true,
   excludeEventTypes: [],
-  filterEventKeys: []
+  filterEventKeys: [],
+  excludeComponents: []
 };
