@@ -1,5 +1,5 @@
 import React from "react";
-import Events from "../events";
+import { EVENTS } from "../constants";
 import defaultOptions from "../defaultOptions";
 
 export class WithLifecycleEvents extends React.Component {
@@ -14,8 +14,8 @@ export class WithLifecycleEvents extends React.Component {
   componentDidMount() {
     const { channel, api } = this.props;
     // Listen to the notes and render it.
-    channel.on(Events.EVENTS, this.onAddEvents);
-    channel.on(Events.INITIALIZATION, this.changeOptions);
+    channel.on(EVENTS.EVENTS, this.onAddEvents);
+    channel.on(EVENTS.INITIALIZATION, this.changeOptions);
 
     // Clear the current notes on every story change.
     this.stopListeningOnStory = api.onStory(() => {
@@ -29,7 +29,7 @@ export class WithLifecycleEvents extends React.Component {
   componentDidUpdate(prevProps) {
     const { active, channel } = this.props;
     if (prevProps.active !== active && active) {
-      channel.emit(Events.OPEN_PANEL);
+      channel.emit(EVENTS.OPEN_PANEL);
     }
   }
 
@@ -50,7 +50,7 @@ export class WithLifecycleEvents extends React.Component {
     const { channel, active } = this.props;
     if (!active) {
       // TODO: This only provides the amount of unprocessed events
-      channel.emit(Events.UNREAD_EVENTS, amountUnreadEvents);
+      channel.emit(EVENTS.UNREAD_EVENTS, amountUnreadEvents);
     }
   }
 
@@ -62,8 +62,8 @@ export class WithLifecycleEvents extends React.Component {
 
     this.unmounted = true;
     const { channel } = this.props;
-    channel.removeListener(Events.EVENTS, this.onAddEvents);
-    channel.removeListener(Events.INITIALIZATION, this.changeOptions);
+    channel.removeListener(EVENTS.EVENTS, this.onAddEvents);
+    channel.removeListener(EVENTS.INITIALIZATION, this.changeOptions);
   }
 
   render() {

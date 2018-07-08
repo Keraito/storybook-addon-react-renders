@@ -1,5 +1,5 @@
 import React from "react";
-import Events from "../events";
+import { EVENTS } from "../constants";
 
 export class WithLifecycleNotifications extends React.Component {
   constructor(props) {
@@ -12,8 +12,8 @@ export class WithLifecycleNotifications extends React.Component {
 
   componentDidMount() {
     const { channel } = this.props;
-    channel.on(Events.UNREAD_EVENTS, this.updateUnreadEvents);
-    channel.on(Events.OPEN_PANEL, this.clearUnreadEvents);
+    channel.on(EVENTS.UNREAD_EVENTS, this.updateUnreadEvents);
+    channel.on(EVENTS.OPEN_PANEL, this.clearUnreadEvents);
   }
 
   updateUnreadEvents(amountUnreadEvents) {
@@ -29,8 +29,8 @@ export class WithLifecycleNotifications extends React.Component {
   componentWillUnmount() {
     this.unmounted = true;
     const { channel } = this.props;
-    channel.removeListener(Events.UNREAD_EVENTS, this.updateUnreadEvents);
-    channel.removeListener(Events.OPEN_PANEL, this.clearUnreadEvents);
+    channel.removeListener(EVENTS.UNREAD_EVENTS, this.updateUnreadEvents);
+    channel.removeListener(EVENTS.OPEN_PANEL, this.clearUnreadEvents);
   }
 
   render() {

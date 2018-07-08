@@ -1,7 +1,7 @@
 import React from "react";
 import addons, { makeDecorator } from "@storybook/addons";
 import { whyDidYouUpdate } from "why-did-you-update";
-import Events from "./events";
+import { EVENTS } from "./constants";
 
 const notifier = (
   groupByComponent,
@@ -9,7 +9,7 @@ const notifier = (
   displayName,
   diffs
 ) => {
-  addons.getChannel().emit(Events.EVENTS, diffs);
+  addons.getChannel().emit(EVENTS.EVENTS, diffs);
 };
 
 whyDidYouUpdate(React, { notifier });
@@ -22,7 +22,7 @@ export const withLifeCycle = makeDecorator({
     const channel = addons.getChannel();
     const lifecycleOptions = { ...options, ...parameters };
 
-    channel.emit(Events.INITIALIZATION, lifecycleOptions);
+    channel.emit(EVENTS.INITIALIZATION, lifecycleOptions);
     return getStory(context);
   }
 });

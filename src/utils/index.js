@@ -1,9 +1,4 @@
-export const DIFF_TYPES = {
-  UNAVOIDABLE: "unavoidable",
-  SAME: "same",
-  EQUAL: "equal",
-  FUNCTIONS: "functions"
-};
+import { DIFF_TYPES } from "../constants";
 
 export const formatTitle = ({ name, type }) => {
   switch (type) {
