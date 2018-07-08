@@ -1,6 +1,6 @@
 import styled from "react-emotion";
 
-const Indicator = styled("div")(
+export default styled("div")(
   ({ color, size }) => ({
     boxSizing: "border-box",
     padding: `0 ${size / 2}px`,
@@ -17,5 +17,3 @@ const Indicator = styled("div")(
     ...styles
   })
 );
-
-export default Indicator;

@@ -26,6 +26,13 @@ export class WithLifecycleEvents extends React.Component {
     });
   }
 
+  componentDidUpdate(prevProps) {
+    const { active, channel } = this.props;
+    if (prevProps.active !== active && active) {
+      channel.emit(Events.OPEN_PANEL);
+    }
+  }
+
   changeOptions(options) {
     this.setState({ options: { ...defaultOptions, ...options } });
   }
