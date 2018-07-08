@@ -17,3 +17,12 @@ export const Indicator = styled("div")(
     ...styles
   })
 );
+
+export const PanelWrapper = styled("div")({
+  display: "flex",
+  alignItems: "center"
+});
+
+export const PanelName = styled("div")({
+  paddingRight: 5
+});

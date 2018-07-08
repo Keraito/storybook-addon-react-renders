@@ -1,16 +1,6 @@
 import React from "react";
-import styled from "react-emotion";
 import { WithLifecycleNotifications } from "../../containers/WithLifecycleNotifications";
-import { Indicator } from "./style";
-
-const PanelWrapper = styled("div")({
-  display: "flex",
-  alignItems: "center"
-});
-
-const PanelName = styled("div")({
-  paddingRight: 5
-});
+import { Indicator, PanelName, PanelWrapper } from "./style";
 
 const PanelTitle = props => (
   <WithLifecycleNotifications
