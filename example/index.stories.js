@@ -91,7 +91,7 @@ storiesOf("Lifecycle addon|Options", module)
     }
   )
   .add(
-    "with excluded object keys",
+    "with included object keys",
     () => <DemoComponent component={Button} />,
     {
       lifecycle: {
