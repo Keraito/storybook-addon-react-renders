@@ -1,10 +1,10 @@
 import React from "react";
 import { Inspector } from "react-inspector";
 import { Actions, Action, InspectorContainer } from "./style";
-import { formatTitle } from "../utils";
-import { WithOptions } from "../containers/WithOptions";
+import { formatTitle } from "../../utils";
+import { WithOptions } from "../../containers/WithOptions";
 
-export const LifecyclePanel = props => (
+const Panel = props => (
   <WithOptions
     render={({ events }) => (
       <Actions>
@@ -25,3 +25,5 @@ export const LifecyclePanel = props => (
     {...props}
   />
 );
+
+export default Panel;
