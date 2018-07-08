@@ -106,6 +106,24 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
+"@storybook/addon-actions@^4.0.0-alpha.9":
+  version "4.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-4.0.0-alpha.9.tgz#51946700ee1de6556c8531bb59e48b38460edd07"
+  dependencies:
+    "@storybook/addons" "4.0.0-alpha.9"
+    "@storybook/components" "4.0.0-alpha.9"
+    "@storybook/core-events" "4.0.0-alpha.9"
+    babel-runtime "^6.26.0"
+    deep-equal "^1.0.1"
+    emotion "^9.1.3"
+    global "^4.3.2"
+    lodash.isequal "^4.5.0"
+    make-error "^1.3.4"
+    prop-types "^15.6.1"
+    react-emotion "^9.1.3"
+    react-inspector "^2.3.0"
+    uuid "^3.2.1"
+
 "@storybook/addon-options@^4.0.0-alpha.9":
   version "4.0.0-alpha.9"
   resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-4.0.0-alpha.9.tgz#646ab7a647357a4f948160e528a8193e29ec7994"
@@ -166,9 +184,26 @@
     react-textarea-autosize "^6.1.0"
     render-fragment "^0.1.1"
 
+"@storybook/components@4.0.0-alpha.9":
+  version "4.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-4.0.0-alpha.9.tgz#b0036726e055d7c3e2efb5ef3c7ec2ba9c4f5a8d"
+  dependencies:
+    emotion "^9.1.3"
+    emotion-theming "^9.1.2"
+    global "^4.3.2"
+    lodash.pick "^4.4.0"
+    lodash.throttle "^4.1.1"
+    prop-types "^15.6.1"
+    react-emotion "^9.1.3"
+    react-split-pane "^0.1.77"
+
 "@storybook/core-events@4.0.0-alpha.12":
   version "4.0.0-alpha.12"
   resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.0.0-alpha.12.tgz#252e212eaf49bcc976d9e60dd8a060d1a641675d"
+
+"@storybook/core-events@4.0.0-alpha.9":
+  version "4.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@storybook/core-events/-/core-events-4.0.0-alpha.9.tgz#cc2c7c63a03b609cc52f3291480a7c69dc5244c2"
 
 "@storybook/core@4.0.0-alpha.12":
   version "4.0.0-alpha.12"
@@ -3887,6 +3922,10 @@ make-dir@^1.0.0:
   dependencies:
     pify "^3.0.0"
 
+make-error@^1.3.4:
+  version "1.3.4"
+  resolved "https://registry.yarnpkg.com/make-error/-/make-error-1.3.4.tgz#19978ed575f9e9545d2ff8c13e33b5d18a67d535"
+
 mamacro@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/mamacro/-/mamacro-0.0.3.tgz#ad2c9576197c9f1abf308d0787865bd975a3f3e4"
@@ -6009,6 +6048,10 @@ utils-merge@1.0.1:
 uuid@^3.1.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.2.1.tgz#12c528bb9d58d0b9265d9a2f6f0fe8be17ff1f14"
+
+uuid@^3.2.1:
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.2.tgz#1b4af4955eb3077c501c23872fc6513811587131"
 
 vary@~1.1.2:
   version "1.1.2"

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "react-emotion";
-import { WithLifecycleNotifications } from "../containers/WithLifecycleNotifications";
-import Indicator from "./Indicator";
+import { WithLifecycleNotifications } from "../../containers/WithLifecycleNotifications";
+import { Indicator } from "./style";
 
 const PanelWrapper = styled("div")({
   display: "flex",
@@ -12,7 +12,7 @@ const PanelName = styled("div")({
   paddingRight: 5
 });
 
-export const LifecyclePanelTitle = props => (
+const PanelTitle = props => (
   <WithLifecycleNotifications
     render={({ amountUnreadEvents }) => (
       <PanelWrapper>
@@ -25,3 +25,5 @@ export const LifecyclePanelTitle = props => (
     {...props}
   />
 );
+
+export default PanelTitle;
