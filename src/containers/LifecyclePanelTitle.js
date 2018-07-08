@@ -17,7 +17,7 @@ export const LifecyclePanelTitle = props => (
     render={({ amountUnreadEvents }) => (
       <PanelWrapper>
         <PanelName>Lifecycle</PanelName>
-        {amountUnreadEvents ? (
+        {amountUnreadEvents > 0 ? (
           <Indicator color={"DARKORANGE"} size={10} />
         ) : null}
       </PanelWrapper>
