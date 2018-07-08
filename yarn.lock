@@ -106,39 +106,11 @@
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@nodelib/fs.stat/-/fs.stat-1.1.0.tgz#50c1e2260ac0ed9439a181de3725a0168d59c48a"
 
-"@storybook/addon-actions@^4.0.0-alpha.9":
-  version "4.0.0-alpha.12"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-4.0.0-alpha.12.tgz#2d5a427b311411fd6a5dd2951725cda8f8eaf248"
+"@storybook/addon-options@^4.0.0-alpha.9":
+  version "4.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-4.0.0-alpha.9.tgz#646ab7a647357a4f948160e528a8193e29ec7994"
   dependencies:
-    "@storybook/addons" "4.0.0-alpha.12"
-    "@storybook/components" "4.0.0-alpha.12"
-    "@storybook/core-events" "4.0.0-alpha.12"
-    babel-runtime "^6.26.0"
-    deep-equal "^1.0.1"
-    emotion-theming "^9.1.2"
-    global "^4.3.2"
-    lodash.isequal "^4.5.0"
-    make-error "^1.3.4"
-    prop-types "^15.6.1"
-    react-emotion "^9.1.3"
-    react-inspector "^2.3.0"
-    uuid "^3.2.1"
-
-"@storybook/addon-links@^4.0.0-alpha.9":
-  version "4.0.0-alpha.12"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-4.0.0-alpha.12.tgz#7124983eee3a20ccb465ee5ccb55f136e8040980"
-  dependencies:
-    "@storybook/addons" "4.0.0-alpha.12"
-    "@storybook/components" "4.0.0-alpha.12"
-    "@storybook/core-events" "4.0.0-alpha.12"
-    babel-runtime "^6.26.0"
-    global "^4.3.2"
-    prop-types "^15.6.1"
-
-"@storybook/addon-options@^3.4.8":
-  version "3.4.8"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-3.4.8.tgz#e2b79605bb8674e8d67e3ad695f4b7a489bcd06a"
-  dependencies:
+    "@storybook/addons" "4.0.0-alpha.9"
     babel-runtime "^6.26.0"
 
 "@storybook/addons@4.0.0-alpha.12", "@storybook/addons@^4.0.0-alpha.9":
@@ -147,6 +119,14 @@
   dependencies:
     "@storybook/channels" "4.0.0-alpha.12"
     "@storybook/components" "4.0.0-alpha.12"
+    global "^4.3.2"
+    util-deprecate "^1.0.2"
+
+"@storybook/addons@4.0.0-alpha.9":
+  version "4.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-4.0.0-alpha.9.tgz#20990e11eaf543e5abdcf872a3bb71d2d649d035"
+  dependencies:
+    "@storybook/channels" "4.0.0-alpha.9"
     global "^4.3.2"
     util-deprecate "^1.0.2"
 
@@ -161,6 +141,10 @@
 "@storybook/channels@4.0.0-alpha.12":
   version "4.0.0-alpha.12"
   resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.0.0-alpha.12.tgz#b647027d38b077704af58186fae146abdc809583"
+
+"@storybook/channels@4.0.0-alpha.9":
+  version "4.0.0-alpha.9"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-4.0.0-alpha.9.tgz#ad2cf3444a8bf2d205ccd491ceb0b8e9a21ae561"
 
 "@storybook/client-logger@4.0.0-alpha.12":
   version "4.0.0-alpha.12"
@@ -3903,10 +3887,6 @@ make-dir@^1.0.0:
   dependencies:
     pify "^3.0.0"
 
-make-error@^1.3.4:
-  version "1.3.4"
-  resolved "https://registry.yarnpkg.com/make-error/-/make-error-1.3.4.tgz#19978ed575f9e9545d2ff8c13e33b5d18a67d535"
-
 mamacro@^0.0.3:
   version "0.0.3"
   resolved "https://registry.yarnpkg.com/mamacro/-/mamacro-0.0.3.tgz#ad2c9576197c9f1abf308d0787865bd975a3f3e4"
@@ -6026,7 +6006,7 @@ utils-merge@1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
 
-uuid@^3.1.0, uuid@^3.2.1:
+uuid@^3.1.0:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.2.1.tgz#12c528bb9d58d0b9265d9a2f6f0fe8be17ff1f14"
 
