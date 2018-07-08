@@ -1,5 +1,10 @@
 import styled from "react-emotion";
 
+/*
+  The Indicator component comes from:
+  https://github.com/storybooks/storybook/blob/f49c44482618ca77e8134b53aba58d6138b662ed/addons/jest/src/components/Indicator.js
+*/
+
 export const Indicator = styled("div")(
   ({ color, size }) => ({
     boxSizing: "border-box",

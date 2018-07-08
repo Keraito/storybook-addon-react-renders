@@ -1,5 +1,10 @@
 import styled from "react-emotion";
 
+/*
+  The components (Actions, Action, InspectorContainer) for displaying the events from this Addon are from:
+  https://github.com/storybooks/storybook/blob/f49c44482618ca77e8134b53aba58d6138b662ed/addons/actions/src/components/ActionLogger/style.js
+*/
+
 export const Actions = styled("pre")({
   flex: 1,
   margin: 0,
