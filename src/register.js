@@ -1,7 +1,7 @@
 import React from "react";
 import addons from "@storybook/addons";
-import { LifecyclePanelTitle } from "./containers/LifecyclePanelTitle";
-import { LifecyclePanel } from "./containers/LifecyclePanel";
+import { LifecyclePanelTitle } from "./components/LifecyclePanelTitle";
+import { LifecyclePanel } from "./components/LifecyclePanel";
 import { ADDON_NAME } from "./constants";
 
 // Register the addon with a unique name.

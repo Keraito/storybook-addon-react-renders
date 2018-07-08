@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "react-emotion";
-import { WithLifecycleNotifications } from "../components/WithLifecycleNotifications";
+import { WithLifecycleNotifications } from "../containers/WithLifecycleNotifications";
 import Indicator from "./Indicator";
 
 const PanelWrapper = styled("div")({

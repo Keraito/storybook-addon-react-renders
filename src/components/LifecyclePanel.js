@@ -2,7 +2,7 @@ import React from "react";
 import { Inspector } from "react-inspector";
 import { Actions, Action, InspectorContainer } from "./style";
 import { formatTitle } from "../utils";
-import { WithOptions } from "../components/WithOptions";
+import { WithOptions } from "../containers/WithOptions";
 
 export const LifecyclePanel = props => (
   <WithOptions
