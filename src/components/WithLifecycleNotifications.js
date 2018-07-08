@@ -11,7 +11,7 @@ export class WithLifecycleNotifications extends React.Component {
   }
 
   componentDidMount() {
-    const { channel, api } = this.props;
+    const { channel } = this.props;
     channel.on(Events.UNREAD_EVENTS, this.updateUnreadEvents);
     channel.on(Events.OPEN_PANEL, this.clearUnreadEvents);
   }

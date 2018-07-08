@@ -1,6 +1,5 @@
 import React from "react";
 import { Inspector } from "react-inspector";
-import { WithLifecycleEvents } from "../components/WithLifecycleEvents";
 import { Actions, Action, InspectorContainer } from "./style";
 import { formatTitle } from "../utils";
 import { WithOptions } from "../components/WithOptions";
