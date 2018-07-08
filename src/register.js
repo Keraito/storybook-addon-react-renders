@@ -10,6 +10,8 @@ addons.register("keraito/lifecycle", api => {
     title: () => (
       <LifecyclePanelTitle channel={addons.getChannel()} api={api} />
     ),
-    render: () => <LifecyclePanel channel={addons.getChannel()} api={api} />
+    render: ({ active }) => (
+      <LifecyclePanel channel={addons.getChannel()} api={api} active={active} />
+    )
   });
 });

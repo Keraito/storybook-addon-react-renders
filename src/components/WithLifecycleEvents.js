@@ -8,6 +8,7 @@ export class WithLifecycleEvents extends React.Component {
     this.state = { events: [], options: defaultOptions };
     this.onAddEvents = this.onAddEvents.bind(this);
     this.changeOptions = this.changeOptions.bind(this);
+    this.notifyUnreadEvents = this.notifyUnreadEvents.bind(this);
   }
 
   componentDidMount() {
@@ -30,9 +31,20 @@ export class WithLifecycleEvents extends React.Component {
   }
 
   onAddEvents(events) {
-    this.setState(previousState => ({
-      events: previousState.events.concat(events)
-    }));
+    this.setState(
+      previousState => ({
+        events: previousState.events.concat(events)
+      }),
+      () => this.notifyUnreadEvents(events.length)
+    );
+  }
+
+  notifyUnreadEvents(amountUnreadEvents) {
+    const { channel, active } = this.props;
+    if (!active) {
+      // TODO: This only provides the amount of unprocessed events
+      channel.emit(Events.UNREAD_EVENTS, amountUnreadEvents);
+    }
   }
 
   // This is some cleanup tasks when the panel is unmounting.
