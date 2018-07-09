@@ -6,7 +6,7 @@ const PanelTitle = props => (
   <WithLifecycleNotifications
     render={({ amountUnreadEvents }) => (
       <PanelWrapper>
-        <PanelName>Lifecycle</PanelName>
+        <div>Lifecycle</div>
         {amountUnreadEvents > 0 ? (
           <Indicator color={"DARKORANGE"} size={10} />
         ) : null}

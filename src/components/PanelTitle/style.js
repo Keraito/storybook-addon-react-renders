@@ -24,10 +24,8 @@ export const Indicator = styled("div")(
 );
 
 export const PanelWrapper = styled("div")({
-  display: "flex",
+  display: "grid",
+  gridAutoFlow: "column",
+  gridGap: 5,
   alignItems: "center"
-});
-
-export const PanelName = styled("div")({
-  paddingRight: 5
 });
