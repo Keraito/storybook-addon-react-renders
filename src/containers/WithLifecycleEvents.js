@@ -54,7 +54,6 @@ export class WithLifecycleEvents extends React.Component {
   notifyUnreadEvents(amountUnreadEvents) {
     const { channel, active } = this.props;
     if (!active) {
-      // TODO: This only provides the amount of unprocessed events
       channel.emit(EVENTS.UNREAD_EVENTS, amountUnreadEvents);
     }
   }

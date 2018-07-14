@@ -25,9 +25,9 @@ class DemoComponent extends React.Component {
   }
 
   componentWillUnmount() {
-    // if (this.props.delayed) {
-    //   clearTimeout(this.timer);
-    // }
+    if (this.props.delayed) {
+      clearTimeout(this.timer);
+    }
   }
 
   render() {
@@ -86,6 +86,15 @@ storiesOf("Lifecycle addon|Options", module)
     {
       lifecycle: {
         excludeComponents: ["Button"]
+      }
+    }
+  )
+  .add(
+    "with the number of unread events disabled",
+    () => <DemoComponent component={Button} />,
+    {
+      lifecycle: {
+        disableNotificationsNumber: true
       }
     }
   );

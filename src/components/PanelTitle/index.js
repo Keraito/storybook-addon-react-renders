@@ -1,14 +1,16 @@
 import React from "react";
 import { WithLifecycleNotifications } from "../../containers/WithLifecycleNotifications";
-import { Indicator, PanelName, PanelWrapper } from "./style";
+import { Indicator, PanelWrapper } from "./style";
 
 const PanelTitle = props => (
   <WithLifecycleNotifications
-    render={({ amountUnreadEvents }) => (
+    render={({ amountUnreadEvents, options }) => (
       <PanelWrapper>
         <div>Lifecycle</div>
         {amountUnreadEvents > 0 ? (
-          <Indicator color={"DARKORANGE"} size={10} />
+          <Indicator color={"LIGHTSLATEGRAY"} size={13}>
+            {options.disableNotificationsNumber ? null : amountUnreadEvents}
+          </Indicator>
         ) : null}
       </PanelWrapper>
     )}
