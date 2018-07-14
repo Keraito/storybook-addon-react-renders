@@ -1,5 +1,6 @@
 import React from "react";
 import { EVENTS } from "../constants";
+import { filterEventsWithOptions } from "../utils";
 import defaultOptions from "../defaultOptions";
 
 export class WithLifecycleEvents extends React.Component {
@@ -38,11 +39,15 @@ export class WithLifecycleEvents extends React.Component {
   }
 
   onAddEvents(events) {
+    const filteredEvents = filterEventsWithOptions({
+      events,
+      options: this.state.options
+    });
     this.setState(
       previousState => ({
-        events: previousState.events.concat(events)
+        events: previousState.events.concat(filteredEvents)
       }),
-      () => this.notifyUnreadEvents(events.length)
+      () => this.notifyUnreadEvents(filteredEvents.length)
     );
   }
 
