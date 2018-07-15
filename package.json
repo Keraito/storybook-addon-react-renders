@@ -7,7 +7,6 @@
   "license": "MIT",
   "files": [
     "dist",
-    "styles.js",
     "register.js"
   ],
   "devDependencies": {
@@ -15,12 +14,14 @@
     "@storybook/addon-options": "^4.0.0-alpha.9",
     "@storybook/addons": "^4.0.0-alpha.9",
     "@storybook/react": "^4.0.0-alpha.9",
+    "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.4.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "babel-runtime": "^6.26.0",
+    "cross-env": "^5.2.0",
     "jest": "^23.4.1",
     "react": "^16.0.0",
     "react-dom": "^16.0.0"
@@ -31,8 +32,15 @@
     "why-did-you-update": "^0.1.1"
   },
   "scripts": {
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
+    "clean:storybook": "rm -rf build",
+    "prebuild:storybook": "yarn run clean:storybook",
+    "build:storybook": "build-storybook -c example/.storybook -o build/",
+    "storybook": "cross-env NODE_ENV=development start-storybook -p 6006 -c example/.storybook",
+    "prebuild": "yarn run clear",
+    "build": "cross-env NODE_ENV=production babel -d ./dist ./src",
+    "prepublish": "yarn run build",
+    "start": "yarn run storybook",
+    "clear": "rm -rf ./dist",
     "test": "jest"
   }
 }
