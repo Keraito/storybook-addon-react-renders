@@ -42,22 +42,22 @@ class DemoComponent extends React.Component {
   }
 }
 
-storiesOf("Lifecycle addon", module)
+storiesOf("Renders addon", module)
   .add("Single component events", () => <DemoComponent />)
   .add("Multiple component events", () => <DemoComponent component={Button} />)
   .add("With an async update", () => (
     <div>
-      Browse to another panel and inspect the Lifecycle panel.
+      Browse to another panel and inspect the Renders panel.
       <DemoComponent delayed />
     </div>
   ));
 
-storiesOf("Lifecycle addon|Options", module)
+storiesOf("Renders addon|Options", module)
   .add(
     "with empty events disabled",
     () => <DemoComponent component={Button} />,
     {
-      lifecycle: {
+      renders: {
         showEmptyEvents: false
       }
     }
@@ -66,7 +66,7 @@ storiesOf("Lifecycle addon|Options", module)
     "with excluded event types",
     () => <DemoComponent component={Button} />,
     {
-      lifecycle: {
+      renders: {
         excludeEventTypes: ["props"]
       }
     }
@@ -75,7 +75,7 @@ storiesOf("Lifecycle addon|Options", module)
     "with included object keys",
     () => <DemoComponent component={Button} />,
     {
-      lifecycle: {
+      renders: {
         filterEventKeys: ["booleanProp", "numberProp", "arrayProp"]
       }
     }
@@ -84,7 +84,7 @@ storiesOf("Lifecycle addon|Options", module)
     "with excluded events from specific components",
     () => <DemoComponent component={Button} />,
     {
-      lifecycle: {
+      renders: {
         excludeComponents: ["Button"]
       }
     }
@@ -93,7 +93,7 @@ storiesOf("Lifecycle addon|Options", module)
     "with the number of unread events disabled",
     () => <DemoComponent component={Button} />,
     {
-      lifecycle: {
+      renders: {
         disableNotificationsNumber: true
       }
     }

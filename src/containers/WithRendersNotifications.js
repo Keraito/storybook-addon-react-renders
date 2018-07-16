@@ -2,7 +2,7 @@ import React from "react";
 import { EVENTS } from "../constants";
 import defaultOptions from "../defaultOptions";
 
-export class WithLifecycleNotifications extends React.Component {
+export class WithRendersNotifications extends React.Component {
   constructor(props) {
     super(props);
 

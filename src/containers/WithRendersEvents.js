@@ -3,7 +3,7 @@ import { EVENTS } from "../constants";
 import { filterEventsWithOptions } from "../utils";
 import defaultOptions from "../defaultOptions";
 
-export class WithLifecycleEvents extends React.Component {
+export class WithRendersEvents extends React.Component {
   constructor(props) {
     super(props);
     this.state = { events: [], options: defaultOptions };

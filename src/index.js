@@ -14,15 +14,15 @@ const notifier = (
 
 whyDidYouUpdate(React, { notifier });
 
-export const withLifeCycle = makeDecorator({
-  name: "withLifecycle",
-  parameterName: "lifecycle",
+export const withRenders = makeDecorator({
+  name: "withRenders",
+  parameterName: "renders",
   skipIfNoParametersOrOptions: false,
   wrapper: (getStory, context, { options, parameters }) => {
     const channel = addons.getChannel();
-    const lifecycleOptions = { ...options, ...parameters };
+    const rendersOptions = { ...options, ...parameters };
 
-    channel.emit(EVENTS.INITIALIZATION, lifecycleOptions);
+    channel.emit(EVENTS.INITIALIZATION, rendersOptions);
     return getStory(context);
   }
 });

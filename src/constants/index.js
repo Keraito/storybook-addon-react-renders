@@ -1,4 +1,4 @@
-export const ADDON_NAME = "keraito/lifecycle";
+export const ADDON_NAME = "keraito/renders";
 
 export const EVENTS = {
   INITIALIZATION: `${ADDON_NAME}/set`,

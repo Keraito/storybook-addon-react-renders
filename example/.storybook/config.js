@@ -1,17 +1,17 @@
 import { configure, addDecorator } from "@storybook/react";
 import { setOptions } from "@storybook/addon-options";
-import { withLifeCycle } from "../../src";
+import { withRenders } from "../../src";
 
-addDecorator(withLifeCycle);
+addDecorator(withRenders);
 
 setOptions({
-  name: "REACT LIFECYCLE ADDON",
+  name: "REACT RENDERS",
   hierarchySeparator: /\|/
 });
 
 // automatically import all files ending in *.stories.js
 function loadStories() {
-  require('../index.stories')
+  require("../index.stories");
 }
 
 configure(loadStories, module);

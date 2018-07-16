@@ -2,10 +2,10 @@ import React from "react";
 import { Inspector } from "react-inspector";
 import { Actions, Action, InspectorContainer } from "./style";
 import { formatTitle } from "../../utils";
-import { WithLifecycleEvents } from "../../containers/WithLifecycleEvents";
+import { WithRendersEvents } from "../../containers/WithRendersEvents";
 
 const Panel = props => (
-  <WithLifecycleEvents
+  <WithRendersEvents
     render={({ events }) => (
       <Actions>
         {events.map(({ name, prev, next, type }, index) => (

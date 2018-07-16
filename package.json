@@ -1,7 +1,7 @@
 {
-  "name": "storybook-react-lifecycle",
+  "name": "storybook-react-renders",
   "version": "1.0.0",
-  "description": "Storybook addon for checking lifecycle analysis of React components.",
+  "description": "Storybook addon for renders analysis of React components.",
   "main": "dist/index.js",
   "author": "Chak Shun Yu",
   "license": "MIT",
