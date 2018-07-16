@@ -3,11 +3,11 @@ import { DIFF_TYPES } from "../constants";
 export const formatTitle = ({ name, type }) => {
   switch (type) {
     case DIFF_TYPES.SAME:
-      return `${name}: Value is the same (equal by reference). Avoidable re-render`;
+      return `${name}: Value is the same (equal by reference).`;
     case DIFF_TYPES.EQUAL:
-      return `${name}: Value did not change, avoidable re-render`;
+      return `${name}: Value did not change.`;
     case DIFF_TYPES.FUNCTIONS:
-      return `${name}: Changes are in functions only. Possibly avoidable re-render`;
+      return `${name}: Changes are in functions only.`;
     default:
       return name;
   }
