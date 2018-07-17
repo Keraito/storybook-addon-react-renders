@@ -4,6 +4,19 @@
   "description": "Storybook addon for renders analysis of React components.",
   "main": "dist/index.js",
   "author": "Chak Shun Yu",
+  "homepage": "https://github.com/keraito/storybook-addon-react-renders",
+  "bugs": "https://github.com/keraito/storybook-addon-react-renders/issues",
+  "keywords": [
+    "storybook",
+    "react",
+    "addon",
+    "renders",
+    "analysis"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keraito/storybook-addon-react-renders"
+  },
   "license": "MIT",
   "files": [
     "dist",
