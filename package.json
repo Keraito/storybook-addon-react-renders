@@ -1,6 +1,6 @@
 {
   "name": "storybook-react-renders",
-  "version": "1.0.0",
+  "version": "0.0.1",
   "description": "Storybook addon for renders analysis of React components.",
   "main": "dist/index.js",
   "author": "Chak Shun Yu",
