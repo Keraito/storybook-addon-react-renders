@@ -71,6 +71,6 @@ export class WithRendersEvents extends React.Component {
   }
 
   render() {
-    return this.props.render(this.state);
+    return this.props.active ? this.props.render(this.state) : null;
   }
 }
