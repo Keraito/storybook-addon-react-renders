@@ -28,13 +28,13 @@ This library turns it into a storybook addon and redirects all the log events in
 
 ### Installation
 
-```js
+```
 $ npm install --save-dev storybook-addon-react-renders
 ```
 
 or
 
-```js
+```
 $ yarn add --dev storybook-addon-react-renders
 ```
 
