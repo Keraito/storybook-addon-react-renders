@@ -1,5 +1,5 @@
 {
-  "name": "storybook-react-renders",
+  "name": "storybook-addon-react-renders",
   "version": "0.0.1",
   "description": "Storybook addon for renders analysis of React components.",
   "main": "dist/index.js",
