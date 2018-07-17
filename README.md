@@ -4,6 +4,8 @@
 
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/mixn/carbon-now-cli/blob/master/license) [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
 
+_Check out the [Live Storybook demo](https://keraito.github.io/storybook-addon-react-renders/)._
+
 ## Description
 
 [Why-did-you-update](https://github.com/maicki/why-did-you-update) by [maicki](https://github.com/maicki) is an awesome tool to notify you of **potential** wasted re-renders by your React components.
