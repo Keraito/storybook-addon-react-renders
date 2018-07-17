@@ -46,7 +46,7 @@
     "why-did-you-update": "^0.1.1"
   },
   "scripts": {
-    "deploy-storybook": "storybook-to-ghpages --existing-output-dir=build",
+    "deploy-storybook": "yarn run build:storybook && mv build .out && storybook-to-ghpages --existing-output-dir=.out",
     "clean:storybook": "rm -rf build",
     "prebuild:storybook": "yarn run clean:storybook",
     "build:storybook": "build-storybook -c example/.storybook -o build/",
