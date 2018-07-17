@@ -22,7 +22,7 @@ This library turns it into a storybook addon and redirects all the log events in
 - ⚡️ Creates powerful integrations with Storybook addons (like [knobs](https://github.com/storybooks/storybook/tree/master/addons/knobs)).
 - 🔧 Configurable in different ways to filter events and objects to what's interesting to you.
 - 👍 Seperates it from your production code.
-- ⛏ Maintained
+- ⛏ Maintained.
 
 ## Getting Started
 
