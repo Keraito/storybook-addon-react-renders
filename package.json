@@ -27,6 +27,7 @@
     "@storybook/addon-options": "^4.0.0-alpha.9",
     "@storybook/addons": "^4.0.0-alpha.9",
     "@storybook/react": "^4.0.0-alpha.9",
+    "@storybook/storybook-deployer": "^2.3.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-jest": "^23.4.0",
@@ -45,6 +46,7 @@
     "why-did-you-update": "^0.1.1"
   },
   "scripts": {
+    "deploy-storybook": "storybook-to-ghpages --existing-output-dir=build/",
     "clean:storybook": "rm -rf build",
     "prebuild:storybook": "yarn run clean:storybook",
     "build:storybook": "build-storybook -c example/.storybook -o build/",
